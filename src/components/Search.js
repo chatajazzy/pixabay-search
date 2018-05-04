@@ -3,6 +3,7 @@ import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import axios from 'axios';
+import ImageResults from './ImageResults';
 
 export default class Search extends Component {
   state = {
@@ -33,7 +34,13 @@ export default class Search extends Component {
       }
     );
   };
+  onAmountChange = (e, index, value) => {
+    this.setState({
+      amount: value
+    });
+  };
   render() {
+    console.log('sta', this.state);
     return (
       <div>
         <TextField
@@ -55,6 +62,9 @@ export default class Search extends Component {
           <MenuItem value={30} primaryText="30" />
           <MenuItem value={50} primaryText="50" />
         </SelectField>
+        {this.state.images.length > 0 ? (
+          <ImageResults images={this.state.images} />
+        ) : null}
       </div>
     );
   }
