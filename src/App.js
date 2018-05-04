@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Navbar from './components/Navbar';
 
 class App extends Component {
   render() {
-    return <div className="App">hejka</div>;
+    return (
+      <MuiThemeProvider>
+        <div>
+          <Navbar />
+        </div>
+      </MuiThemeProvider>
+    );
   }
 }
 
