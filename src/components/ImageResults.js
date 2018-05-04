@@ -24,7 +24,7 @@ export default class ImageResults extends Component {
                 </span>
               }
               actionIcon={
-                <IconButton>
+                <IconButton onClick={() => this.handleOpen(img.largeImageURL)}>
                   <ZoomIn color="white" />
                 </IconButton>
               }
