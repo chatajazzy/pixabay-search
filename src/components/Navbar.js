@@ -4,7 +4,7 @@ import AppBar from 'material-ui/AppBar';
 const Navbar = () => {
   return (
     <div>
-      <AppBar title="Pixabay Search" />
+      <AppBar showMenuIconButton={false} title="Pixabay Search" />
     </div>
   );
 };
